@@ -1,5 +1,7 @@
-Here you can say lots of fun things about your site.
+Welcome to my cyber security search blog!
 
-Maybe say a some things about yourself.
+Hi my name is insa or maybe p4p4 m4n3.
+~$ whoami
+i am a cyber security researcher.
 
-Or maybe what you plan to blog about.
+I like to learn and share my knowledge with the community
