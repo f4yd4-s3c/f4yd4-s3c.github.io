@@ -1,4 +1,4 @@
-Welcome to my cyber security search blog!
+Welcome to my cyber security researcher blog!
 
 Hi my name is insa or maybe p4p4 m4n3.
 ~$ whoami
