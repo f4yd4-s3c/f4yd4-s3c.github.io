@@ -1,11 +1,13 @@
 <h1 align='center'>Welcome to my cyber security researcher blog!</h1>
-<head style="color:blue_heart;">
+
 ~$ whoami<br>
    Hi my name is insa or maybe p4p4 m4n3.
    i am a cyber security researcher.
    I like to learn and share my knowledge with the cyber security community
-</head>
+
 <h2 align='center'> Basic description to cyber sec </h2>
+
+<img src="/images/hacking-gif.gif" alt="Italian Trulli">
 
 Cyber Security is the process and techniques involved in protecting sensitive data, computer systems, networks, and software applications from cyber attacks. The cyber attacks are general terminology that covers a large number of topics, but some of the popular are:
 <ul>
@@ -74,4 +76,4 @@ In an organization, to accomplish an effective Cyber Security approach, the peop
 <p>source:</p>
 <a href="https://geekflare.com/understanding-cybersecurity/">geekflare.com</a>
 
-<img src="/images/hacking-gif.gif" alt="Italian Trulli">
+
