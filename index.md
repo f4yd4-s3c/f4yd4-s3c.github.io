@@ -42,20 +42,14 @@ Spreading spam emails
 Stealing of confidential data
 Botnets attacks are generally carried out against large-scale businesses and organizations due to their huge data access. Through this attack, the hackers can control many devices and compromise them for their evil motives.
 
-  <h2 style="color:red;"> Social Engineering Attacks </h2>
+<h2 style="color:red;"> Social Engineering Attacks </h2>
 Social engineering is now a common tactic used by cybercriminals to gather user’s sensitive information.
-
-
-
 It may trick you by displaying attractive advertisements, prizes, huge offers, and asking you to feed your personal and bank account details. All the information you enter there is cloned and used for financial fraud, identity fraud, and so.
 
 It is worth saying about the ZEUS virus that is active since 2007 and is being used as a social engineering attack method to steal the victims’ banking details. Along with financial losses, Social engineering attacks can download other destructive threats to the concerned system.
 
-  <h2style="color:red;">Cryptocurrency Hijacking</h2>
+<h2 style="color:red;">Cryptocurrency Hijacking</h2>
 Cryptocurrency hijacking is the new addition to this cyber world.
-
-
-
 As digital currency and mining are becoming popular, so it is among cybercriminals. They have found their evil benefit to crypto-currency mining, which involves complex computing to mine virtual currency like Bitcoin, Ethereum, Monero, Litecoin, etc.
 
 Cryptocurrency investors and traders are the soft targets for this attack.
@@ -75,9 +69,13 @@ The phishing scam attacks are the most common cyber attacks that aim to steal se
 
 Along with these, 2019 will seek the potential in biometric attacks, AI attacks, and IoT attacks. Many companies and organizations are witnessing large-scale cyber-attacks, and there is no stop for them. Despite the constant security analysis and updates, the rise of cyber-threat is consistent. Thus, it is worth educating yourself on the basics of cybersecurity and its implementations.
 
-  <h1 align='center'>Conclusion</h1>
+<h1 align='center'>Conclusion</h1>
 
 In an organization, to accomplish an effective Cyber Security approach, the peoples, processes, computers, networks, and technology of an organization, either big or small, should be equally responsible. If all components complement each other, it is very much possible to stand against the tough cyber threat and attacks.
-  
- <a href="https://geekflare.com/understanding-cybersecurity/">Source: geekflare.com</a>
+
+
+
+
+<p>source:</p>
+<a href="https://geekflare.com/understanding-cybersecurity/">geekflare.com</a>
 
