@@ -60,7 +60,6 @@ The technique is used to mine Monero coins particularly. As mining is a complex 
 It also lessens the lifespan of the affected device.
 
 <h2 style="color:red;">Phishing</h2
-
 Phishing is a fraudulent action of sending spam emails by imitating to be from any legitimate source.
 Such mails have a strong subject line with attachments like an invoice, job offers, big offers from reputable shipping services, or any important mail from higher officials of the company.
 
