@@ -98,13 +98,7 @@ body {
       <a href="#">Others</a>
     </div>
   </div>
-  <div class="subnav">
-    <button class="subnavbtn">0-Days <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#">RCE</a>
-      <a href="#">PRV-ESC</a>
-    </div>
-  </div> 
+  
  <div class="subnav">
     <button class="subnavbtn">CVEs <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
@@ -128,7 +122,6 @@ body {
       <a href="#">Web</a>
     </div>
   </div>
-  <a href="#">Reverse-engineering</a>
   <div class="subnav">
     <button class="subnavbtn">Support-Me-plz <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
