@@ -93,12 +93,19 @@ body {
   <div class="subnav">
     <button class="subnavbtn">Scripting <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#link1">python3</a>
+      <a href="#link1">Python3</a>
       <a href="#link2">Bash</a>
-      <a href="#link3">Others 3</a>
-      <a href="#link4">Link 4</a>
+      <a href="#link3">Others</a>
     </div>
   </div>
+  <div class="subnav">
+    <button class="subnavbtn">0-Days <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#bring">RCE</a>
+      <a href="#deliver">PRV-ESC</a>
+    </div>
+  </div> 
+  
   <a href="#contact">Contact</a>
 </div>
 
