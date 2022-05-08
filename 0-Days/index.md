@@ -1,7 +1,76 @@
-<!-- Load font awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 align='center'>Welcome to my cyber security researcher blog!</h1>
 
-<!-- The navigation menu -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: green;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: green;
+  padding: 14px 16px;
+  background-color: black;
+  font-family: black;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: blue;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: green;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
 <div class="navbar">
   <a href="#home">Home</a>
   <div class="subnav">
@@ -11,7 +80,7 @@
       <a href="#team">Team</a>
       <a href="#careers">Careers</a>
     </div>
-  </div>
+  </div> 
   <div class="subnav">
     <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
@@ -20,7 +89,7 @@
       <a href="#package">Package</a>
       <a href="#express">Express</a>
     </div>
-  </div>
+  </div> 
   <div class="subnav">
     <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
@@ -32,3 +101,12 @@
   </div>
   <a href="#contact">Contact</a>
 </div>
+
+<div style="padding:0 16px">
+  
+</div>
+
+</body>
+</html>
+
+<br>
