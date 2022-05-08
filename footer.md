@@ -12,7 +12,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333; 
+  background-color: #000000; 
 }
 
 .navbar a {
@@ -95,6 +95,7 @@ body {
     <div class="subnav-content">
       <a href="#">Python3</a>
       <a href="#">Bash</a>
+      <a href="#">Powershell</a>
       <a href="#">Others</a>
     </div>
   </div>
