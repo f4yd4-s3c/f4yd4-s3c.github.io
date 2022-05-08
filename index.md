@@ -7,7 +7,7 @@
 
 <h2 align='center'> Basic description to cyber sec </h2>
 
-<img src="/images/hacking-gif.gif" alt="Italian Trulli" width="460" height="345">
+<img src="/images/hacking-gif.gif" alt="Italian Trulli" width="100" height="600">
 
 Cyber Security is the process and techniques involved in protecting sensitive data, computer systems, networks, and software applications from cyber attacks. The cyber attacks are general terminology that covers a large number of topics, but some of the popular are:
 <ul>
