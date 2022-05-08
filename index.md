@@ -41,7 +41,7 @@ body {
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: black;
+  background-color: blue;
 }
 
 .subnav-content {
@@ -61,7 +61,7 @@ body {
 
 .subnav-content a:hover {
   background-color: #eee;
-  color: yellow;
+  color: black;
 }
 
 .subnav:hover .subnav-content {
