@@ -33,8 +33,6 @@ The ransomware authors take advantage of this and demand a considerable ransom a
 <h2 style="color:red;">Botnets Attacks </h2>
 Botnets were initially designed to carry out specific tasks within a group.
 
-
-
 It is defined as a network or group of devices connected with the same network to execute a task. But this is now being used by bad actors and hackers that attempt to access the network and inject any malicious code or malware to disrupt its working. Some of the botnet attacks include:
 
 Distributed Denial of Service (DDoS) attacks
@@ -59,7 +57,7 @@ Cryptocurrency hijacking is also known as “Cryptojacking”. It is a program d
 The technique is used to mine Monero coins particularly. As mining is a complex process, it consumes most of the CPU resources, impacting the system’s performance. Also, it is done under all your expenses so that the victim may get a huge electricity bill and internet bill.
 It also lessens the lifespan of the affected device.
 
-<h2 style="color:red;">Phishing</h2
+<h2 style="color:red;">Phishing</h2>
 Phishing is a fraudulent action of sending spam emails by imitating to be from any legitimate source.
 Such mails have a strong subject line with attachments like an invoice, job offers, big offers from reputable shipping services, or any important mail from higher officials of the company.
 
