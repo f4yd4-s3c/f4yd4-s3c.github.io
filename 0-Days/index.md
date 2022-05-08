@@ -41,7 +41,7 @@ body {
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: blue;
+  background-color: red;
 }
 
 .subnav-content {
@@ -72,7 +72,7 @@ body {
 <body>
 
 <div class="navbar">
-  <a href="#home">Home</a>
+  <a href="https://f4yd4-s3c.github.io/">Home</a>
   <div class="subnav">
     <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
