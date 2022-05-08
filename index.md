@@ -57,8 +57,8 @@ Cryptocurrency investors and traders are the soft targets for this attack.
 Cryptocurrency hijacking is also known as “Cryptojacking”. It is a program designed to inject mining codes silently into the system. Thus the hacker silently uses the CPU, GPU, and power resources of the attacked system to mine for the cryptocurrency.
 
 The technique is used to mine Monero coins particularly. As mining is a complex process, it consumes most of the CPU resources, impacting the system’s performance. Also, it is done under all your expenses so that the victim may get a huge electricity bill and internet bill.
-
 It also lessens the lifespan of the affected device.
+
 <h2 style="color:red;">Phishing</h2
 
 Phishing is a fraudulent action of sending spam emails by imitating to be from any legitimate source.
