@@ -17,7 +17,7 @@ body {
 
 .navbar a {
   float: left;
-  font-size: 20px;
+  font-size: 15px;
   color: green;
   text-align: left;
   padding: 14px 16px;
@@ -30,7 +30,7 @@ body {
 }
 
 .subnav .subnavbtn {
-  font-size: 20px;  
+  font-size: 15px;  
   border: none;
   outline: none;
   color: green;
@@ -49,7 +49,7 @@ body {
   position: absolute;
   left: 0;
   background-color: black;
-  width: 110%;
+  width: 100%;
   z-index: 1;
 }
 
