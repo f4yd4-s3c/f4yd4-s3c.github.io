@@ -1,6 +1,5 @@
 <h1 align='center'>Welcome to my cyber security researcher blog!</h1>
 
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -104,8 +103,7 @@ body {
 </div>
 
 <div style="padding:0 16px">
-  <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
-  <p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p>
+  
 </div>
 
 </body>
