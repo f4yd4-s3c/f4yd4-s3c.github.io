@@ -1,6 +1,6 @@
 <h1 align='center'>Welcome to my cyber security researcher blog!</h1>
-<head style="color:blue;">
-~$ whoami
+<head style="color:blue_heart;">
+~$ whoami<br>
 Hi my name is insa or maybe p4p4 m4n3.
 i am a cyber security researcher.
 I like to learn and share my knowledge with the cyber security community
