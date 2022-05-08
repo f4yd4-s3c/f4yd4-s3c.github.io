@@ -84,28 +84,59 @@ body {
   <div class="subnav">
     <button class="subnavbtn">CTFs <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#bring">TryHackMe</a>
-      <a href="#deliver">HackTheBox</a>
-      <a href="#package">VulnHub</a>
-      <a href="#express">RootMe</a>
+      <a href="#">TryHackMe</a>
+      <a href="#">HackTheBox</a>
+      <a href="#">VulnHub</a>
+      <a href="#">RootMe</a>
     </div>
   </div> 
   <div class="subnav">
     <button class="subnavbtn">Scripting <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#link1">Python3</a>
-      <a href="#link2">Bash</a>
-      <a href="#link3">Others</a>
+      <a href="#">Python3</a>
+      <a href="#">Bash</a>
+      <a href="#">Others</a>
     </div>
   </div>
   <div class="subnav">
     <button class="subnavbtn">0-Days <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#bring">RCE</a>
-      <a href="#deliver">PRV-ESC</a>
+      <a href="#">RCE</a>
+      <a href="#">PRV-ESC</a>
     </div>
   </div> 
-  
+ <div class="subnav">
+    <button class="subnavbtn">CVEs <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">RCE</a>
+      <a href="#">PRV-ESC</a>
+    </div>
+  </div> 
+   <div class="subnav">
+    <button class="subnavbtn">Forensic <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Linux</a>
+      <a href="#">Windows</a>
+      <a href="#">Android</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Exploit-dev <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Linux</a>
+      <a href="#">Windows</a>
+      <a href="#">Web</a>
+    </div>
+  </div>
+  <a href="#">Reverse-engineering</a>
+  <div class="subnav">
+    <button class="subnavbtn">Support-Me-plz <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="https://paypal.me/f4yd4s3c">Paypal</a>
+      <a href="https://www.buymeacoffee.com/f4yd4">buy-me-a-coffee</a>
+      <a href="#">Web</a>
+    </div>
+  </div>
   <a href="#contact">Contact</a>
 </div>
 
