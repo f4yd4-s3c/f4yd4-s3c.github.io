@@ -16,9 +16,9 @@ body {
 }
 
 .navbar a {
-  float: left;
+  float: center;
   font-size: 16px;
-  color: white;
+  color: green;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -33,10 +33,10 @@ body {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: green;
   padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
+  background-color: black;
+  font-family: black;
   margin: 0;
 }
 
@@ -109,7 +109,7 @@ body {
 </body>
 </html>
 
-
+<br>
 <h2 align='center'> Basic description to cyber sec </h2>
 
 <img src="/images/hacking-gif.gif" alt="Italian Trulli" width="1000" height="200">
