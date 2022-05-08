@@ -49,7 +49,7 @@ body {
   position: absolute;
   left: 0;
   background-color: black;
-  width: 100%;
+  width: 110%;
   z-index: 1;
 }
 
