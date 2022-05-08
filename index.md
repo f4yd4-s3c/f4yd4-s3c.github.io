@@ -1,9 +1,8 @@
 <h1 align='center'>Welcome to my cyber security researcher blog!</h1>
-<head style="color=blue;">
-Hi my name is insa or maybe p4p4 m4n3.
+<head style="color:blue;">
 ~$ whoami
+Hi my name is insa or maybe p4p4 m4n3.
 i am a cyber security researcher.
-
 I like to learn and share my knowledge with the cyber security community
 </head>
 <h2 align='center'> Basic description to cyber sec </h2>
