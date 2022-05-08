@@ -129,8 +129,7 @@ body {
       <a href="https://www.buymeacoffee.com/f4yd4">buy-me-a-coffee</a>
      
     </div>
-    <a href="#contact">Contact</a>
-  </div>
+   </div>
   <a href="#contact">Contact</a>
 </div>
 
