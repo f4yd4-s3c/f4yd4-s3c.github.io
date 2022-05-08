@@ -12,7 +12,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333; 
+  background-color: #000000; 
 }
 
 .navbar a {
