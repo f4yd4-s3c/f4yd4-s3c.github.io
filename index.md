@@ -16,10 +16,10 @@ body {
 }
 
 .navbar a {
-  float: center;
+  float: left;
   font-size: 16px;
   color: green;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -41,21 +41,21 @@ body {
 }
 
 .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: red;
+  background-color: black;
 }
 
 .subnav-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: red;
+  background-color: black;
   width: 100%;
   z-index: 1;
 }
 
 .subnav-content a {
   float: left;
-  color: white;
+  color: green;
   text-decoration: none;
 }
 
