@@ -61,7 +61,7 @@ body {
 
 .subnav-content a:hover {
   background-color: #eee;
-  color: black;
+  color: yellow;
 }
 
 .subnav:hover .subnav-content {
