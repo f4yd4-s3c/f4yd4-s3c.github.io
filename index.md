@@ -1,5 +1,10 @@
- <include src="/ft.html"></include>
-<br>
+<body>
+  {% include ft.html %}
+  
+  Content.
+
+  {% include ft.html %}
+</body><br>
 <h2 align='center'> Basic description to cyber sec </h2>
 
 <img src="/images/hacking-gif.gif" alt="Italian Trulli" width="1000" height="200">
