@@ -127,6 +127,7 @@ body {
     <div class="subnav-content">
       <a href="https://paypal.me/f4yd4s3c">Paypal</a>
       <a href="https://www.buymeacoffee.com/f4yd4">buy-me-a-coffee</a>
+     <a href="#contact">Contact</a>
     </div>
   </div>
   <a href="#contact">Contact</a>
