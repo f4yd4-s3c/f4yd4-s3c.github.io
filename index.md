@@ -1,4 +1,4 @@
-include file="/footer.md"
+<?php include('footer.md'); ?>
 <br>
 <h2 align='center'> Basic description to cyber sec </h2>
 
