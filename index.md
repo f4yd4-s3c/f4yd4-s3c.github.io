@@ -74,3 +74,4 @@ In an organization, to accomplish an effective Cyber Security approach, the peop
 <p>source:</p>
 <a href="https://geekflare.com/understanding-cybersecurity/">geekflare.com</a>
 
+<img src=/images/hacking-gif.gif>
