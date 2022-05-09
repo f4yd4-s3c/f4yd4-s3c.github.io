@@ -1,4 +1,4 @@
-<h1 align='center'>Welcome to my cyber security researcher blog!</h1>
+<!-- <h1 align='center'>Welcome to my cyber security researcher blog!</h1> -->
 
 <html>
 <head>
@@ -19,7 +19,7 @@ body {
   float: left;
   font-size: 18px;
   color: green;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
 }
