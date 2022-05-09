@@ -19,13 +19,13 @@ body {
   float: left;
   font-size: 18px;
   color: green;
-  text-align: left;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .subnav {
-  float: center;
+  float: left;
   overflow: hidden;
 }
 
