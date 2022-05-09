@@ -25,7 +25,7 @@ body {
 }
 
 .subnav {
-  float: left;
+  float: center;
   overflow: hidden;
 }
 
