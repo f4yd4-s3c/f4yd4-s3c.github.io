@@ -76,8 +76,7 @@ body {
   <div class="subnav">
     <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#company">me</a>
-      <a href="#team">f4yd4-s3c</a>
+      <a href="https://f4yd4-s3c.github.io/about/">me</a>
     </div>
   </div> 
   <div class="subnav">
