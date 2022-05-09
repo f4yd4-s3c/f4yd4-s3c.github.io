@@ -126,8 +126,8 @@ body {
   <div class="subnav">
     <button class="subnavbtn">Support-Me-plz <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="https://paypal.me/f4yd4s3c">Paypal</a>
-      <a href="https://www.buymeacoffee.com/f4yd4">buy-me-a-coffee</a>
+      <a href="https://paypal.me/f4yd4s3c" target="_blank">Paypal</a>
+      <a href="https://www.buymeacoffee.com/f4yd4" target="_blank">buy-me-a-coffee</a>
      
     </div>
     <a href="#contact">Contact</a>
