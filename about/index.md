@@ -147,6 +147,6 @@ body {
    I like to learn and share my knowledge with the cyber security community
    
    
-  support me plz:
-  <a href="https://www.buymeacoffee.com/f4yd4" target="_blank">buy me a coffee </a>
+  support me plz: <br>
+  <a href="https://www.buymeacoffee.com/f4yd4" target="_blank">buy me a coffee </a> <br>
   <a href="https://paypal.me/f4yd4s3c" target="_blank">Paypal </a>
