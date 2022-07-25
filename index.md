@@ -82,7 +82,7 @@ body {
   <div class="subnav">
     <button class="subnavbtn">CTFs <i class="fa fa-caret-down"></i></button>
     <div class="subnav-content">
-      <a href="#">TryHackMe</a>
+      <a href="https://f4yd4-s3c.github.io/ctf/TryHackMe/">TryHackMe</a>
       <a href="#">HackTheBox</a>
       <a href="#">VulnHub</a>
       <a href="#">RootMe</a>
