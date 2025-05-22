@@ -188,15 +188,15 @@
 		<strong>2-</strong><br><br>Available listener types:<br><br>
             <pre>http, https, quic</pre>
             <p>
-		  QUIC and HTTPS listeners can use the same port, and I highly recommend using both. 
-  		You should host payloads over HTTPS and use QUIC for your server and Bayefall communication. 
-                HTTPS uses the TCP transport protocol, while QUIC uses UDP. 
-                I know what you might think when you hear "UDP," but don't worry  no packets will be lost; everything will work fine. 
-                Please take some time to read the documentation about the QUIC protocol  you'll enjoy it. 
-                Here is the full Google Doc: 
+  QUIC and HTTPS listeners can share the same port, and I highly recommend using both. 
+  You should host payloads over HTTPS and use QUIC for communication between the server and Bayefall. 
+  HTTPS relies on the TCP transport protocol, while QUIC uses UDP.
+  I know what you might think when you hear "UDP," but don't worry — no packets will be lost; everything will work reliably. 
+  I encourage you to take some time to read the documentation about the QUIC protocol — you'll enjoy it.
+  Here is the full Google Doc:
   <a href="https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34/edit?tab=t.0" target="_blank">
-    quic doc
-  </a>
+    QUIC Documentation
+  </a>.
 </p>
 
 	    <p>If you are using HTTPS or QUIC, make sure to provide the appropriate SSL certificate and key:</p>
