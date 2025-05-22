@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBEUBEU C2 - Bayefall Agent</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+
+    .screenshot {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        }
+
+    .gif-image {
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+        }
+
+    .logo-container {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+        }
+
+        .c2-logo {
+                max-height: 100px;
+                height: auto;
+                width: auto;
+        }
+
+
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      background: #161b22;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #8b949e;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #30363d;
+      color: #f0f6fc;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 40px;
+      max-width: 1000px;
+      background: #161b22;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .step {
+      background: #21262d;
+      border-left: 4px solid #58a6ff;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+
+    code {
+      background: #30363d;
+      color: #f0f6fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    pre {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      color: #f0f6fc;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h1>MBEUBEU C2</h1>
+    <ul>
+      <li><a href="home.html">home</a></li>
+      <li><a href="installation.html">Installation</a></li>
+      <li><a href="profile-config.html">Profile Configuration</a></li>
+      <li><a href="teamserver.html">Teamserver</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="listeners.html">Listeners</a></li>
+      <li><a href="payloads.html">Payloads</a></li>
+      <li><a href="bayefall.html">Bayefall</a></li>
+      <li><a href="opsec.html">OPSEC</a></li>
+      <li><a href="development.html">Development</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="logo-container">
+                <img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
+     </div>
+    <div class="hero">
+      <h2>Function-as-a-Service (FaaS)</h2>
+      <p>Get custom features integrated into MBEUBEU C2 on request — built for red teams, researchers, and educators.</p>
+    </div>
+
+    <h3>What is FaaS?</h3>
+    <p>
+      Function-as-a-Service in the context of MBEUBEU C2 allows you to request custom functionalities or modules 
+      that are not included by default. Whether you need a new beaconing behavior, listener format, evasive loader, 
+      or post-exploitation module, simply reach out with your idea.
+    </p>
+    <p><strong>Everything is technically possible.</strong> Just send your feature request to <strong>mane.papa@outlook.com</strong> and we’ll build it for you.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>🧠 Intelligent Custom Development</h3>
+        <p>Send a specific use-case or feature idea — we’ll handle the full secure implementation tailored to MBEUBEU's architecture.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔐 OPSEC-Focused Features</h3>
+        <p>Built-in stealth with techniques such as process hollowing, in-memory execution, and sandbox evasion.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚡ Fast Delivery</h3>
+        <p>Most custom features delivered within 72 hours — urgent or same-day delivery possible upon request.</p>
+      </div>
+    </div>
+
+    <h3>How It Works</h3>
+    <div class="step">
+      <p><strong>1-</strong> Send an email to <code>mane.papa@outlook.com</code> with a clear description of the feature you want.</p>
+    </div>
+    <div class="step">
+      <p><strong>2-</strong> We’ll evaluate your request and confirm feasibility, timeline, and pricing.</p>
+    </div>
+    <div class="step">
+      <p><strong>3-</strong> Feature will be securely delivered with usage instructions and OPSEC guidance.</p>
+    </div>
+
+    <h3>Common Feature Requests</h3>
+    <ul class="feature-list">
+      <div class="step"> 
+      	<li>🛠️ Espionage tools for targeted information gathering</li>
+      </div>
+      <div class="step">
+       <li>🛠️ Ransomware simulations mimicking real-world ransomware gangs</li>
+       </div>
+       <div class="step">
+      	<li>🛠️ Custom payload stagers (HTA, JS, ISO, LNK, MSI, etc.)</li>
+       </div>
+       <div class="step">
+      	<li>🔄 Auto-elevate + UAC bypass modules</li>
+       </div>
+       <div class="step">
+      	<li>🧬 DLL side-loading templates</li>
+       </div>
+       <div class="step">
+      	<li>📡 Custom HTTP/S or DNS listener profiles</li>
+      </div>
+      <div class="step">
+      	<li>🎯 Cobalt Strike or Havoc compatibility bridges</li>
+      </div>
+      <div class="step">
+      	<li>🪤 Lateral movement modules (WMI, PSRemoting, RDP launcher)</li>
+      </div>
+      <div class="step">
+      	<li>👣 Fileless execution & anti-forensic cleanup</li>
+      </div>
+      <div class="step">
+      	<li>📁 Exfiltration packs (OneDrive/Dropbox spoofers)</li>
+
+      </div>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Want a Custom Feature?</h3>
+      <p>Email me at <strong>mane.papa@outlook.com</strong> with a short spec or idea. You'll get a reply within 4 hours.</p>
+    </div>
+
+    <div class="note">
+      <strong>⚠️ Legal & Ethical Use Notice:</strong>
+      <p style="color: red;">MBEUBEU C2 and its custom FaaS are strictly for legal penetration testing, cybersecurity research, and educational purposes. 
+      You are solely responsible for ensuring all features are used in environments you are authorized to test.</p>
+    </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBEUBEU C2 - Bayefall Agent</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    .screenshot {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        }
+
+    .gif-image {
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+        }
+
+    .logo-container {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+        }
+
+        .c2-logo {
+                max-height: 100px;
+                height: auto;
+                width: auto;
+        }
+
+
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      background: #161b22;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #8b949e;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #30363d;
+      color: #f0f6fc;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 40px;
+      max-width: 1000px;
+      background: #161b22;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .step {
+      background: #21262d;
+      border-left: 4px solid #58a6ff;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+
+    code {
+      background: #30363d;
+      color: #f0f6fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    pre {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      color: #f0f6fc;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h1>MBEUBEU C2</h1>
+    <ul>
+      <li><a href="home.html">home</a></li>
+      <li><a href="installation.html">Installation</a></li>
+      <li><a href="profile-config.html">Profile Configuration</a></li>
+      <li><a href="teamserver.html">Teamserver</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="listeners.html">Listeners</a></li>
+      <li><a href="payloads.html">Payloads</a></li>
+      <li><a href="bayefall.html">Bayefall</a></li>
+      <li><a href="opsec.html">OPSEC</a></li>
+      <li><a href="development.html">Development</a></li>
+    </ul>
+  </nav>
+
+    <main class="content">
+	<div class="logo-container">
+                <img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
+        </div>
+        <h2>Listeners</h2>
+
+        <div class="step">
+	    <div class="logo-container">
+                <img src="screenshots/start-ltn.gif" alt="MBEUBEU C2" class="gif-image">
+            </div>
+	    <strong>1-</strong><br><br> To create a new listener, use the <code>listener generate</code> command:<br><br> 
+            <pre>listener generate -n 'name' -a address:port -t type [-c cert] [-k key]</pre>
+            <p>This will create a listener with the specified type (e.g., HTTP, HTTPS, QUIC) and bind it to the provided address and port.</p>
+	    
+	    <p>
+  		<strong>Note:</strong> If the listener address does not include a port, just provide the domain or IP address.
+  		If the listener type is HTTPS or QUIC, port <code>:443</code> will be used by default.
+  		If the type is HTTP, port <code>:80</code> will be used.
+	    </p>
+
+
+        </div>
+
+        <div class="step">
+		<strong>2-</strong><br><br>Available listener types:<br><br>
+            <pre>http, https, quic</pre>
+            <p>
+		  QUIC and HTTPS listeners can use the same port, and I highly recommend using both. 
+  		You should host payloads over HTTPS and use QUIC for your server and Bayefall communication. 
+                HTTPS uses the TCP transport protocol, while QUIC uses UDP. 
+                I know what you might think when you hear "UDP," but don't worry  no packets will be lost; everything will work fine. 
+                Please take some time to read the documentation about the QUIC protocol  you'll enjoy it. 
+                Here is the full Google Doc: 
+  <a href="https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34/edit?tab=t.0" target="_blank">
+    https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34/edit?tab=t.0
+  </a>
+</p>
+
+	    <p>If you are using HTTPS or QUIC, make sure to provide the appropriate SSL certificate and key:</p>
+            <pre>-c certificate_path -k key_path</pre>
+            <p>You can use the <code>files/tools/generate_cert</code> script to generate a self-signed certificate.</p>
+
+	</div>
+
+        <div class="step">
+            <strong>3-</strong><br><br>Example of generating a listener:<br><br>
+            <pre>listener generate -n my_listener -a 192.168.1.100:443 -t https -c cert.pem -k key.pem</pre>
+        </div>
+
+        <div class="step">
+            <strong>4-</strong> To start the listener, use the <code>listener start</code> command:<br><br>
+            <pre>listener start -n 'listener_name'</pre>
+            <p>This will start the listener with the specified name.</p>
+        </div>
+
+        <div class="step">
+            <strong>5-</strong><br><br>To stop a running listener, use the <code>listener stop</code> command:<br><br>
+            <pre>listener stop -n 'listener_name'</pre>
+        </div>
+
+        <div class="step">
+            <strong>6-</strong><br><br>To delete a listener, use the <code>listener delete</code> command:<br><br>
+            <pre>listener delete -n 'listener_name'</pre>
+        </div>
+
+        <div class="step">
+            <strong>7-</strong> To show all active listeners, use the <code>listener show</code> command:<br><br>
+            <pre>listener show</pre>
+            <p>This will list all currently active listeners.</p>
+        </div>
+
+        <p>Next: <a href="payloads.html">Payloads</a></p>
+    </main>
+</body>
+</html>
+

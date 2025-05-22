@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBEUBEU C2 - Bayefall Agent</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    .screenshot {
+    	width: 100%; 
+    	max-width: 900px; 
+    	height: auto; 
+	}
+
+    .gif-image {
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+        }
+
+    .logo-container {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+        }
+
+        .c2-logo {
+                max-height: 100px;
+                height: auto;
+                width: auto;
+        }
+
+
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      background: #161b22;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #8b949e;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #30363d;
+      color: #f0f6fc;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 40px;
+      max-width: 1000px;
+      background: #161b22;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .step {
+      background: #21262d;
+      border-left: 4px solid #58a6ff;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+
+    code {
+      background: #30363d;
+      color: #f0f6fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    pre {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      color: #f0f6fc;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h1>MBEUBEU C2</h1>
+    <ul>
+      <li><a href="home.html">home</a></li>
+      <li><a href="installation.html">Installation</a></li>
+      <li><a href="profile-config.html">Profile Configuration</a></li>
+      <li><a href="teamserver.html">Teamserver</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="listeners.html">Listeners</a></li>
+      <li><a href="payloads.html">Payloads</a></li>
+      <li><a href="bayefall.html">Bayefall</a></li>
+      <li><a href="opsec.html">OPSEC</a></li>
+      <li><a href="development.html">Development</a></li>
+    </ul>
+  </nav>
+
+    <main class="content">
+        
+	<div class="logo-container">
+    		<img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
+	</div>
+
+
+	<h2>Installation</h2>
+        <div class="step">
+            
+	    <strong>1-</strong><br><br> Clone the official Mbeubeu C2 repository:<br><br>
+
+            <pre>git clone https://github.com/f4yd4-s3c/mbeubeu-c2.git</pre>
+        </div>
+
+        <div class="step">
+            <strong>2-</strong><br><br> Change directory to the project folder:<br><br>
+            <pre>cd mbeubeu-c2</pre>
+        </div>
+
+        <div class="step">
+            <strong>3-</strong><br><br> Run the installer with root privileges:<br><br>
+            <pre>sudo ./install.sh</pre>
+        </div>
+
+        <div class="step">
+            <strong>4-</strong><br><br> Wait until the script completes setup. It will automatically install all dependencies, configure the environment, and prepare the mbeubeu C2 for use.<br><br>
+        </div>
+
+        <p>Next: <a href="profile-config.html">Profile Configuration</a>.</p>
+    </main>
+</body>
+</html>
+

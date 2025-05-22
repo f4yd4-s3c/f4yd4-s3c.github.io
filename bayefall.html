@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBEUBEU C2 - Bayefall Agent</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    .screenshot {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        }
+
+    .gif-image {
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+        }
+
+    .logo-container {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+        }
+
+        .c2-logo {
+                max-height: 100px;
+                height: auto;
+                width: auto;
+        }
+
+
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      background: #161b22;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #8b949e;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #30363d;
+      color: #f0f6fc;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 40px;
+      max-width: 1000px;
+      background: #161b22;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .step {
+      background: #21262d;
+      border-left: 4px solid #58a6ff;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+
+    code {
+      background: #30363d;
+      color: #f0f6fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    pre {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      color: #f0f6fc;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h1>MBEUBEU C2</h1>
+    <ul>
+      <li><a href="home.html">home</a></li>
+      <li><a href="installation.html">Installation</a></li>
+      <li><a href="profile-config.html">Profile Configuration</a></li>
+      <li><a href="teamserver.html">Teamserver</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="listeners.html">Listeners</a></li>
+      <li><a href="payloads.html">Payloads</a></li>
+      <li><a href="bayefall.html">Bayefall</a></li>
+      <li><a href="opsec.html">OPSEC</a></li>
+      <li><a href="development.html">Development</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <div class="logo-container">
+                <img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
+    </div>
+    <h2>Interactive Bayefall/Agent Commands</h2>
+
+    <div class="step">
+	<p>Before going further, note that all screenshots taken will be saved in <code>./files/Downloads/screenshots/</code>. All smart-shots will be saved in <code>./files/Downloads/screenshots/window_title_name.pgn</code>, and all downloaded data will be stored in <code>./files/Downloads/exfiltrated_data/</code>. Additionally, all Bayefall logs are stored in <code>./files/Downloads/logs/</code>.</p>
+
+<p>You can use the <code>report.py</code> script located in <code>files/tools/</code> to generate a report in HTML format, which can be opened in your browser. The <code>report.py</code> script requires to be run from the project dir cd mbeubeu-c2. Example usage:</p>
+
+
+<pre>python3 files/tools/report.py </pre>
+	<div class="logo-container">
+                <img src="screenshots/report.gif" alt="MBEUBEU C2 " class="gif-image">
+    </div>
+
+
+<p>
+  The <code>report_start</code> and <code>report_stop</code> commands are used to serve the <code>index.html</code> report page,
+  which allows login with a randomly generated username and password. The URL will be based on the TeamServer's IP address and port.
+</p>
+
+<pre>report_start</pre>
+
+<div class="logo-container">
+  <img src="screenshots/gnr.png" alt="MBEUBEU C2" class="screenshot">
+</div>
+
+<div class="logo-container">
+  <img src="screenshots/gnr2.png" alt="MBEUBEU C2" class="screenshot">
+</div>
+
+
+    </div>
+
+
+
+    <div class="step">
+      <strong>Interactive mode</strong><br><br>
+      <div class="logo-container">
+                <img src="screenshots/nbf.gif" alt="MBEUBEU C2 " class="gif-image">
+    </div>
+      <p>When a new Bayefall is registered, you can use the <code>interact</code> command to interact with the Bayefall.</p>
+      <p>The Bayefall name looks like <code>SRV01@2025-05-14-22-35-30</code>, which is the target hostname and the first seen timestamp separated by <code>@</code>. Keep in mind that if the Bayefall has non-privileged access, the interactive console color will be blue. If it has privileged access, the console color will be red.</p>
+
+      <pre>interact 'bayefall_name'</pre>
+    </div>
+
+    <h2><strong>Hidden Features</strong></h2>
+    <p>There are several commands included to make internal phishing, recon and persistence easier</p>
+
+    <div class="step">
+
+      <code>office_infect</code><br><br>
+      Command fo Weaponize Office docs. This look docm or xlsm file into all users Desktop and Documents dir then infect them <br><br>
+      <ul>
+        <li>Scans for .docm/.xlsm files</li>
+        <li>Injects malicious macros</li>
+      </ul><br>
+      
+      <p>
+  	The <code>.bin</code> file can be extracted using the <code>unzip</code> command:
+  	<code>unzip -d extracted_macro file.docm</code>.
+  	Then, navigate to the <code>word</code> or <code>xlm</code> directory to find the <code>.bin</code> file.
+  	You only need this file for the <code>office_infect</code> command.
+      </p>
+
+      <pre>office_infect /home/p4p4/vbaProject.bin</pre>
+    </div>
+
+    <div class="step">
+	    <code>smart_shot</code><br><br>
+	    Stealth Screenshots: Command to take screenshots based on window titles. I’ve provided a <code>titles.txt</code> file so you can choose the window titles you want.<br><br>
+	   <pre>smart_shot file_content_titles time_in_second </pre>
+	   <pre>smart_shot titles.txt 5000</pre>
+    </div>
+
+    <div class="step">
+      <code>usb_infect</code><br><br>
+      USB Propagation: This command monitors plugged-in USB devices and automatically infects them.<br>
+You only need to provide a <code>payload.exe</code> file and a document file. It will then create hidden files along with a <code>.lnk</code> file that uses the same icon as Microsoft Word.<br><br>
+      <pre>usb_infect Ndobin.exe invoice.docx 60</pre>
+    </div>
+
+    <div class="step">
+	<code>pwsploit</code><br><br>
+	Powersploit Integration: Currently, only the Mimikatz and Recon modules are available. The Recon module uses all PowerView commands, while the Mimikatz module supports all <code>Invoke-Mimikatz</code> commands.<br><br>
+      <pre>pwsploit recon Get-Domain</pre>
+      <div class="logo-container">
+                <img src="screenshots/gdm.gif" alt="MBEUBEU C2 " class="gif-image">
+     </div>
+     <pre>pwsploit mimikatz "privilege::debug"</pre><br>
+     <div class="logo-container">
+                <img src="screenshots/mmk.png" alt="MBEUBEU C2 " class="screenshot">
+     </div>
+    </div>
+
+    <div class="step">
+      <code>bof_execute</code><br><br>
+      Beacon Object Files: The <code>bof_execute</code> command lets you choose an available BOF command (use tab completion to display available commands) or provide your own BOF file as args[1]<br><br>
+      <div class="logo-container">
+                <img src="screenshots/bofa.png" alt="MBEUBEU C2 " class="screenshot">
+     </div>
+     <div class="logo-container">
+                <img src="screenshots/bof.png" alt="MBEUBEU C2 " class="screenshot">
+     </div>
+     <pre>bof_execute /local/bof/file.o</pre>
+     <div class="logo-container">
+                <img src="screenshots/wbof.png" alt="MBEUBEU C2 " class="screenshot">
+     </div> 
+
+    </div>
+
+    <div class="step">
+      <code>pwsh-import</code><br><br> 
+      PowerShell Integration: This feature allows you to import PowerShell scripts and use the <code>pwsh-execute</code> command to run functions from them. All imported scripts still bypass AMSI. Please refer to the OPSEC page for details on how the bypass is implemented.<br><br>
+      <pre>pwsh-import Invoke-Mimikatz.ps1</pre>
+      <pre> pwsh-execute Invoke-Mimikatz -Command "privilege::debug"</pre>
+      <div class="logo-container">
+                <img src="screenshots/pimport.png" alt="MBEUBEU C2 " class="screenshot">
+     </div>
+      <p>Note: Only one script can be imported at a time</p>
+    </div>
+
+    <div class="step">
+        <code>persist_*</code><br><br>
+	<p>The persistence module allows you to establish persistence using various techniques such as: startup folder, Winlogon, registry run keys, and scheduled tasks </p><br>
+
+	<pre>persist_startup user/system</pre>
+	<pre>persist_winlogon user/system</pre>
+	<pre>persist_resgistryrun user/system</pre>
+	<pre>persist_schtask user/system</pre>
+	
+	<p>Note that persist commands will not work if you are using the <code>powershell oneliner</code>, because it injects a process, while the persist command relies on <code>os.Executable()</code>.<br> Tip: a one_liner should not be run on a victim machine. It is intended for use in "assumed breach" scenarios where you have full physical control over the machine. If you use the one_liner on an uncontrolled machine, your C2 IP address may be exposed and subsequently banned, so take precautions</p>
+
+    </div>
+
+    <div class="step">
+
+	
+	    <code>defence-analysis</code><br><br>
+		<p>
+  		The <code>defence-analysis</code> command allows you to analyze the target's defensive posture and receive a security hardness score.
+  		This technique was inspired by Ahmed Khlief's <a href="https://github.com/ahmedkhlief/Ninja" target="_blank">Ninja-C2</a>.
+		</p>
+		<pre>defence-analysis</pre>
+
+	    </div>
+
+    <h2>Task/Ndigeul Commands</h2>
+    <div class="step">
+      <p>Use help command to show available bayefall commands.</p>
+      <pre>[💀 bayefall (SRV01 | 2025-05-14-22-35-30) ] > help</pre>
+      <p><strong>Note:</strong> All <code>SharpView</code> commands are also available, but they are not OPSEC-safe.</p>
+
+    </div>
+
+    <p>For OPSEC considerations when using these features, see: <a href="opsec.html">OPSEC Guidelines</a></p>
+  </main>
+</body>
+</html>
+

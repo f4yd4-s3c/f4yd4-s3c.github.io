@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBEUBEU C2 Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+
+	body {
+      		background: #0d1117;
+      		color: #c9d1d9;
+    	}
+
+        .screenshot {
+            max-width: 100%;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .c2-logo {
+            max-height: 100px;
+            height: auto;
+            width: auto;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100%;
+            background: #161b22;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin: 8px 0;
+        }
+
+        .sidebar a {
+            color: #8b949e;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #373e47;
+            color: #cdd9e5;
+        }
+
+        .content {
+            margin-left: 260px;
+            padding: 40px;
+            max-width: 1000px;
+            background: #161b22;
+            min-height: 100vh;
+        }
+
+
+	h2 {
+      		color: #58a6ff;
+      		margin-bottom: 1em;
+      		border-bottom: 2px solid #30363d;
+      		padding-bottom: 0.3em;
+    	}
+
+        ul.feature-list {
+            list-style-type: "✅ ";
+            padding-left: 1.5em;
+        }
+
+        ul.feature-list li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <h1>MBEUBEU C2</h1>
+        <ul>
+	    <li><a href="home.html">home</a></li>
+            <li><a href="installation.html">Installation</a></li>
+            <li><a href="profile-config.html">Profile Configuration</a></li>
+            <li><a href="teamserver.html">Teamserver</a></li>
+            <li><a href="client.html">Client</a></li>
+            <li><a href="listeners.html">Listeners</a></li>
+            <li><a href="payloads.html">Payloads</a></li>
+            <li><a href="bayefall.html">Bayefall</a></li>
+            <li><a href="opsec.html">OPSEC</a></li>
+            <li><a href="development.html">Development</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Welcome to MBEUBEU Documentation</h2>
+
+	<h2>👤 Whoami</h2>
+        <p>
+        I’m <strong>Insa Mané</strong>, also known as <strong>P4p4 M4n3</strong>. I'm an electrical engineer and a security researcher .<br>
+        I’m simply <em>"The White Adversary Behind the Keyboard"</em>.<br>
+        I enjoy experimenting with electronics, IoT gadgets, and other little technical gems.
+	</p><br> 
+
+	<p>
+    🔗 Connect with me:<br>
+    • <a href="https://www.linkedin.com/in/p4p4m4n3" target="_blank">LinkedIn</a><br>
+    • <a href="https://twitter.com/p4p4m4n3" target="_blank">Twitter</a><br>
+    • <a href="https://github.com/p4p4m4n3" target="_blank">GitHub</a>
+       </p>
+       <br><br>
+
+
+
+	<p><strong>MBEUBEU</strong> is a flexible and stealthy Command and Control framework designed for modern red team operations and adversary simulation. It supports multiple agent types, including Windows and Linux, and integrates advanced features for post-exploitation, evasion, and operator collaboration.</p>
+
+        <h2>🧠 Features</h2>
+        <ul class="feature-list">
+            <li>💻 Multi-platform agent support (Windows, Linux) . Linux will be available in the next version</li>
+            <li>🌍 HTTP/HTTPS/QUIC listener support</li>
+            <li>📦 Malleable C2 profiles via YAML</li>
+            <li>🛡️ AV/EDR evasion, sandbox detection, smart delay</li>
+            <li>🐚 Shell, PowerShell, and AMSI/ETW bypass execution</li>
+            <li>📷 Smart stealth screenshots based on window titles</li>
+            <li>📁 File transfer, download/upload, directory navigation</li>
+            <li>🎯 Lateral movement: WinRM, PSExec, PTH, DCSync</li>
+            <li>🪟 Credential extraction: Mimikatz, Sharpkatz</li>
+            <li>🧠 In-memory BOF execution, .NET assembly injection</li>
+            <li>📚 PowerSploit & PowerView support</li>
+            <li>🔌 USB propagation, Office document macro injection</li>
+            <li>🧅 SOCKS5 proxy tunneling</li>
+            <li>🚨 Real-time Blue Team detection and redirection</li>
+        </ul>
+	<br><p><a href="installation.html">Get Started with installation </a></p>
+    </main>
+</body>
+</html>
+

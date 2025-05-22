@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBEUBEU C2 - Bayefall Agent</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+    }
+
+    .screenshot {
+        width: 100%; 
+        max-width: 900px; 
+        height: auto; 
+        }
+
+    .gif-image {
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+        }
+
+    .logo-container {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+        }
+
+        .c2-logo {
+                max-height: 100px;
+                height: auto;
+                width: auto;
+        }
+
+
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 260px;
+      height: 100%;
+      background: #161b22;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin: 8px 0;
+    }
+
+    .sidebar a {
+      color: #8b949e;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #30363d;
+      color: #f0f6fc;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 40px;
+      max-width: 1000px;
+      background: #161b22;
+      min-height: 100vh;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 0.3em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .step {
+      background: #21262d;
+      border-left: 4px solid #58a6ff;
+      padding: 12px 20px;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+
+    code {
+      background: #30363d;
+      color: #f0f6fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    pre {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      color: #f0f6fc;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h1>MBEUBEU C2</h1>
+    <ul>
+      <li><a href="home.html">home</a></li>
+      <li><a href="installation.html">Installation</a></li>
+      <li><a href="profile-config.html">Profile Configuration</a></li>
+      <li><a href="teamserver.html">Teamserver</a></li>
+      <li><a href="client.html">Client</a></li>
+      <li><a href="listeners.html">Listeners</a></li>
+      <li><a href="payloads.html">Payloads</a></li>
+      <li><a href="bayefall.html">Bayefall</a></li>
+      <li><a href="opsec.html">OPSEC</a></li>
+      <li><a href="development.html">Development</a></li>
+    </ul>
+  </nav>
+
+    <main class="content">
+	<div class="logo-container">
+                <img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
+        </div>
+        <h2>Teamserver</h2>
+
+        <div class="step">
+	    <div class="logo-container">
+                <img src="screenshots/start-ts.gif" class="gif-image" alt="Start Teamserver Screenshot">
+            </div>
+            <strong>1-</strong><br><br>To launch the TeamServer, simply run the <code>mbeubeu-teamserver</code> binary as root:<br><br>
+            <pre>sudo ./mbeubeu-teamserver -h</pre>
+        </div>
+
+        <div class="step">
+            <strong>2-</strong><br><br>You can specify options such as the port, configuration profile, and server IP. Here's the usage:<br><br>
+            <pre>Usage:
+  mbeubeu-teamserver [flags]
+
+Flags:
+  -h, --help             help for mbeubeu-teamserver
+      --port int         Port to run the C2 server on (default 2013)
+      --profile string   Path to YAML configuration file
+      --server string    Server IP address (e.g. 23.10.2.236)
+            </pre>
+        </div>
+
+        <div class="step">
+            <strong>Example:</strong><br><br>Run the teamserver on port 60000, use a specific config file, and bind it to a specific IP:<br><br>
+            <pre>sudo /mbeubeu-teamserver --port 60000 --profile profile/http_profile.yaml --server 192.168.1.100</pre>
+        </div>
+
+        <div class="step">
+            <strong>Security Intelligence:</strong><br><br>The teamserver logs all incoming traffic and detects Blue Team or suspicious activity in real time.
+            <p>If a known security tool (like <code>curl</code>, <code>nmap</code>, <code>nikto</code>, etc.) is detected or if brute-force attempts are logged, the server console will display a warning:</p>
+            <p> Such detections help harden your infrastructure and take automated decisions.</p>
+        </div>
+
+	<div class="logo-container">
+                <img src="screenshots/detect-ts.png" class="screenshot" alt="Start Teamserver Screenshot">
+        </div>
+
+        <div class="step">
+            <strong>Automatic Redirection:</strong><br><br>When Blue Teams or unauthorized tools are identified, the teamserver can automatically redirect the source to a predefined URL set in the YAML configuration profile.
+            <p>This behavior is defined in your profile YAML file:</p>
+            <pre>profiles/http_profile.yaml "url_to_redirect"</pre>
+	    <p>Please make sure to filter unauthorized IP addresses for the Teamserver port. Only operator IPs should be allowed to access this port. </p>
+
+	     <pre># Allow only operator IP '10.25.1.12' to access port 2013
+sudo iptables -A INPUT -p tcp -s 10.25.1.12 --dport 2013 -j ACCEPT</pre>
+	     <pre># Drop all other connections to port 2013
+sudo iptables -A INPUT -p tcp --dport 2013 -j DROP</pre>
+        </div>
+
+        <p>Next: <a href="client.html">Mbeubeu Client-li</a></p>
+    </main>
+</body>
+</html>
+
