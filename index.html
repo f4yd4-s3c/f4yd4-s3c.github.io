@@ -31,6 +31,32 @@
             transform: scale(1.02);
         }
 
+	.glow-title {
+  		font-size: 2.5rem;
+  		font-weight: bold;
+  		text-align: center;
+  		color: #fff;
+  		text-shadow:
+    		0 0 5px #0ff,
+    		0 0 10px #0ff,
+    		0 0 20px #0ff,
+    		0 0 40px #0ff,
+    		0 0 80px #0ff;
+  		background: linear-gradient(to right, #000000, #111111);
+  		border-radius: 15px;
+  		padding: 20px;
+  		margin-top: 30px;
+  		box-shadow: 0 0 15px #0ff;
+  		font-family: 'Courier New', monospace;
+  		animation: flicker 1.5s infinite alternate;
+	}
+
+	@keyframes flicker {
+  		0% { opacity: 1; text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  		100% { opacity: 0.85; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+	}
+	    
+
         .logo-container {
             display: flex;
             justify-content: flex-end;
@@ -143,19 +169,38 @@
                 	<img src="screenshots/mbeubeu.png" alt="MBEUBEU C2 " class="screenshot" >
         	</div>
 	    
-	<h2>👤 Whoami</h2>
+	<h2 class="glow-title">👤 Whoami</h2>
+
         <p>
         I'm <strong>Insa Mane</strong>, also known as <strong>P4p4 M4n3</strong>. I'm an electrical engineer and a security researcher .<br>
         I'm simply <em>"The White Adversary Behind the Keyboard"</em>.<br>
         I enjoy experimenting with electronics, IoT gadgets, and other little technical gems.
 	</p><br> 
 	<p>
-        <strong> I stand with the people of Gaza.</strong> Please don’t forget to help Gaza victims. <br>
-  <a href="https://www.unicef.org/emergencies/children-gaza-need-lifesaving-support" target="_blank">
-    👉 Donate via UNICEF
 
-  </a><br><br>
-</p>
+	<script>
+  		const message = "I stand with the people of Gaza. Please don’t forget to help Gaza victims.";
+  	let i = 0;
+  	const speed = 50; 
+
+  	function typeWriter() {
+    	if (i < message.length) {
+      		document.getElementById("gaza-message").innerHTML += message.charAt(i);
+      		i++;
+      		setTimeout(typeWriter, speed);
+    		}
+  	}
+
+  window.onload = typeWriter;
+</script>
+		
+	<p id="gaza-message" class="typewriter"></p>
+
+        	<a href="https://www.unicef.org/emergencies/children-gaza-need-lifesaving-support" target="_blank">
+    		👉 Donate via UNICEF
+
+  		</a><br><br>
+	</p>
 
 	    
 
