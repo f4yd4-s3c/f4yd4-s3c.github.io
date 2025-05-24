@@ -198,7 +198,7 @@
                 	<img src="screenshots/gen_p.gif" alt="MBEUBEU C2 " class="gif-image">
                 </div>
 		<strong>1-</strong><br><br> To generate payloads, use the <code>generate_ndobin</code> command:<br><br>
-            <pre>generate_ndobin -l 'listener_name' [options]</pre>
+            <pre>generate_ndobin -l 'listener_name' -p 'paltforp[windows/linux]' [options]</pre>
         </div>
 
         <div class="step">
@@ -207,6 +207,7 @@
   -enc                   Enable payload encryption (default: true)
   -help                  Show help for generate_ndobin command
   -l string              Listener name (required)
+  -p string              Platform name windows/linux (optional) (default "windows")
   -o string              Output directory (default: ./payloads)
   -sandboxEvasion        Enable sandbox evasion (--se/--sandboxEvasion)
   -se                    Enable sandbox evasion (same as --sandboxEvasion)
@@ -215,7 +216,10 @@
 
         <div class="step">
 		<strong>3-</strong><br><br> Example usage<br><br>
-            <pre>generate_ndobin -l http -o /tmp -se=true -enc=false</pre>
+	    <pre>generate_ndobin -l http -p linux -o /tmp -se=true -enc=false</pre>
+	    <p>This command will generate linux payloads in <code>elf</code> format.</p>
+            <div class="logo-container">
+            <pre>generate_ndobin -l http -p windows -o /tmp -se=true -enc=false</pre>
             <p>This command will generate payloads in the formats: <code>exe</code>, <code>bin</code>, <code>ps1</code>, and <code>stager</code> payloads. The stager source code will also be generated, which you can customize for evasion and AV bypass.</p>
             <div class="logo-container">
                 <img src="screenshots/payloads.png" alt="MBEUBEU C2 " class="screenshot">
