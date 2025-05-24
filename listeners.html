@@ -23,6 +23,31 @@
         height: auto;
         }
 
+    .glow-title {
+  		font-size: 2.5rem;
+  		font-weight: bold;
+  		text-align: center;
+  		color: #fff;
+  		text-shadow:
+    		0 0 5px #0ff,
+    		0 0 10px #0ff,
+    		0 0 20px #0ff,
+    		0 0 40px #0ff,
+    		0 0 80px #0ff;
+  		background: linear-gradient(to right, #000000, #111111);
+  		border-radius: 15px;
+  		padding: 20px;
+  		margin-top: 30px;
+  		box-shadow: 0 0 15px #0ff;
+  		font-family: 'Courier New', monospace;
+  		animation: flicker 1.5s infinite alternate;
+	}
+
+	@keyframes flicker {
+  		0% { opacity: 1; text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  		100% { opacity: 0.85; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+	}
+
     .gif-image {
                 width: 100%;
                 max-width: 900px;
@@ -165,7 +190,7 @@
 	<div class="logo-container">
                 <img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
         </div>
-        <h2>Listeners</h2>
+        <h2 class="glow-title">Mbeubeu Listeners</h2>
 
         <div class="step">
 	    <div class="logo-container">
