@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MBEUBEU C2 - Bayefall Agent</title>
+  <title>MBEUBEU C2 </title>
   <style>
     * {
       margin: 0;
@@ -23,6 +23,31 @@
         max-width: 900px;
         height: auto;
         }
+
+    .glow-title {
+  		font-size: 2.5rem;
+  		font-weight: bold;
+  		text-align: center;
+  		color: #fff;
+  		text-shadow:
+    		0 0 5px #0ff,
+    		0 0 10px #0ff,
+    		0 0 20px #0ff,
+    		0 0 40px #0ff,
+    		0 0 80px #0ff;
+  		background: linear-gradient(to right, #000000, #111111);
+  		border-radius: 15px;
+  		padding: 20px;
+  		margin-top: 30px;
+  		box-shadow: 0 0 15px #0ff;
+  		font-family: 'Courier New', monospace;
+  		animation: flicker 1.5s infinite alternate;
+	}
+
+	@keyframes flicker {
+  		0% { opacity: 1; text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  		100% { opacity: 0.85; text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+	}
 
     .gif-image {
                 width: 100%;
@@ -168,7 +193,7 @@
     </div>
 
 
-    <h2>OPSEC</h2>
+    <h2 class="glow-title">OPSEC</h2>
     <h3 style="color: red;">Perfect OPSEC doesnot exist, a <code>whoami</code> at the Wrong Time is a Beacon. Every single action during an operation has a detection risk. Its just a matter of how loud it is, when you do it, and how you cover your tracks <br>
 	    Even a simple whoami can trigger alerts in some hardened environments if it’s done by a process not in the allowlist or during odd hours<br>Note that when the wrong hands (no IT member) type <code>ipconfig</code>, the blue team starts hunting. Your access becomes your disguise, and your commands must reflect the role of the user you compromised. </h3><br> 
     <p>
