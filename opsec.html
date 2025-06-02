@@ -182,7 +182,7 @@
       <li><a href="listeners.html">Listeners</a></li>
       <li><a href="payloads.html">Payloads</a></li>
       <li><a href="bayefall.html">Bayefall</a></li>
-      <li><a href="opsec.html">OPSEC</a></li>
+      <li><a href="opsec.html">OPSEC | AVs/EDRs EVASION</a></li>
       <li><a href="development.html">Development</a></li>
     </ul>
   </nav>
@@ -191,7 +191,7 @@
   <div class="logo-container">
     <img src="images/mbeubeu.png" alt="MBEUBEU C2" class="c2-logo">
   </div>
-  <h2>Note on AV/EDR Evasion</h2>
+  <h2 class="glow-title">Note on AV/EDR Evasion</h2>
   <p>
     The <strong>mbeubeu</strong> project does <strong>not</strong> claim to provide 100% undetectable payloads against all antivirus (AV) and endpoint detection and response (EDR) solutions. Similar to other C2 frameworks, <strong>mbeubeu</strong> is designed with <em>interoperability</em> in mind offering the flexibility to integrate with external tools and techniques focused on AV/EDR evasion.
   </p>
@@ -266,7 +266,7 @@ foreach ($line in $file) {
   </p>
 	
 
-  <h2>OPSEC Considerations</h2><br>
+  <h2 class="glow-title">OPSEC Considerations</h2><br>
   <ul>
     <li><strong>execute-assembly</strong> is not OPSEC-safe it spawns a new suspended process. Instead, prefer <code>bof_execute</code> which is more stealthy (uses Beacon Object Files).</li><br>
     <li>Everything in the <code>src</code> folder can be statically modified to bypass signature-based detection engines.</li><br>
