@@ -202,7 +202,7 @@
 	    The generated <code>.exe</code> payloads are packed using <strong>UPX</strong>, a common executable packer. While UPX can reduce signature detection in some cases, it is <em>not</em> a stealth method on its own.
     </li><br>
     <li>
-      For advanced obfuscation and evasion, operators are encouraged to re-pack or re-encrypt binaries using tools like <strong>Veil-Evasion</strong>, <strong>PEzor</strong>, or custom crypters.
+      For advanced obfuscation and evasion, operators are encouraged to re-pack or re-encrypt binaries using tools like <strong>Veil-Evasion</strong>, <strong>PEzor</strong>, custom crypters, or use <a href=https://github.com/f4yd4-s3c/shcode2exe>shellcode2exe</a> From my github repo or <a href=https://github.com/f4yd4-s3c/ShellCodeLoader>shelcodeLoader</a> .
     </li><br>
     <li>
       The <code>Ndobin-Shellcode*.bin</code> files are raw shellcode representations of the payloads. These are intended to be used with <strong>custom shellcode loaders</strong> (written in C, C++, .NET, PowerShell, VBA, etc.) tailored to your evasion needs.
@@ -275,6 +275,7 @@ foreach ($line in $file) {
     <li>Monitor your own beacons with anomaly detection logic (e.g., beaconing too often, using wrong user-agent).</li><br>
     <li>Every command you type should mimic the role of your current session (Admin vs Helpdesk vs Intern).</li>
   </ul>
+<p>Next: <a href="development.html">Development / FaaS</a></p>
 </main>
 </body>
 </html>
