@@ -191,12 +191,35 @@
   <div class="logo-container">
     <img src="images/mbeubeu.png" alt="MBEUBEU C2" class="c2-logo">
   </div>
+  <h2>Note on AV/EDR Evasion</h2>
+  <p>
+    The <strong>mbeubeu</strong> project does <strong>not</strong> claim to provide 100% undetectable payloads against all antivirus (AV) and endpoint detection and response (EDR) solutions. Similar to other C2 frameworks, <strong>mbeubeu</strong> is designed with <em>interoperability</em> in mind offering the flexibility to integrate with external tools and techniques focused on AV/EDR evasion.
+  </p>
 
+  <p><strong>For instance:</strong></p>
+  <ul>
+    <li>
+	    The generated <code>.exe</code> payloads are packed using <strong>UPX</strong>, a common executable packer. While UPX can reduce signature detection in some cases, it is <em>not</em> a stealth method on its own.
+    </li><br>
+    <li>
+      For advanced obfuscation and evasion, operators are encouraged to re-pack or re-encrypt binaries using tools like <strong>Veil-Evasion</strong>, <strong>PEzor</strong>, or custom crypters.
+    </li><br>
+    <li>
+      The <code>Ndobin-Shellcode*.bin</code> files are raw shellcode representations of the payloads. These are intended to be used with <strong>custom shellcode loaders</strong> (written in C, C++, .NET, PowerShell, VBA, etc.) tailored to your evasion needs.
+    </li><br>
+  </ul>
+
+  <p>
+    Ultimately, <strong>evasion is the operator's responsibility</strong>. <strong>mbeubeu</strong> provides the base payloads, but it's up to the operator to ensure their payloads are stealthy and appropriate for the target environment. AV/EDR evasion requires ongoing adaptation and creativity <em>no framework alone can guarantee stealth</em>.
+  </p><br>
+	  
+  
+	  
   <h2 class="glow-title">OPSEC</h2>
 
   <h3 style="color: red;">
     Perfect OPSEC does not exist. A <code>whoami</code> at the wrong time is a beacon.
-    Every action during an operation has a detection risk—it’s just a matter of how loud it is,
+    Every action during an operation has a detection risk it’s just a matter of how loud it is,
     when you do it, and how you cover your tracks.<br><br>
     Even a simple <code>whoami</code> can trigger alerts in hardened environments if it's executed
     by a non-allowlisted process or at odd hours. Once you compromise a user, your access becomes
@@ -241,10 +264,11 @@ foreach ($line in $file) {
 
     This delays AMSI enough to slip through.
   </p>
+	
 
   <h2>OPSEC Considerations</h2><br>
   <ul>
-    <li><strong>execute-assembly</strong> is not OPSEC-safe—it spawns a new suspended process. Instead, prefer <code>bof_execute</code> which is more stealthy (uses Beacon Object Files).</li><br>
+    <li><strong>execute-assembly</strong> is not OPSEC-safe it spawns a new suspended process. Instead, prefer <code>bof_execute</code> which is more stealthy (uses Beacon Object Files).</li><br>
     <li>Everything in the <code>src</code> folder can be statically modified to bypass signature-based detection engines.</li><br>
     <li>The Go-based stager can embed AMSI bypasses and obfuscate strings before compilation.</li><br>
     <li>Use domain fronting, legit CDN endpoints, and `dead drop resolvers` (e.g., pastebin, GitHub gists) for payload delivery.</li><br>
