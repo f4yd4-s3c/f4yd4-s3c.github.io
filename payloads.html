@@ -194,8 +194,7 @@
         <h2 class="glow-title"> Mbeubeu Ndobin Payloads</h2>
 		<p>
   			<strong>Note:</strong> Generating payloads and one_liners might be a bit slow the first time because of Garble obfuscation and shellcode compilation. 
-  			This process ensures stronger security and better evasion, which is why it requires more system resources and time initially. 
-  			In the next version, I will make it smoother and drop UPX packing, since it's too easy to detect. 
+  			This process ensures stronger security and better evasion, which is why it requires more system resources and time initially.  
   			The short wait at the start guarantees higher-quality payloads and improved reliability for your operations.
 			</p>
         <div class="step">
@@ -214,6 +213,7 @@
   -l string              Listener name (required)
   -p string              Platform name windows/linux (optional) (default "windows")
   -o string              Output directory (default: ./payloads)
+  -r string				 Redirector/Proxy Ip Address (optional Ex: 10.10.10.10)
   -sandboxEvasion        Enable sandbox evasion (--se/--sandboxEvasion)
   -se                    Enable sandbox evasion (same as --sandboxEvasion)
             </pre>
@@ -222,8 +222,8 @@
         <div class="step">
     		<strong>3-</strong><br><br> Example usage<br><br>
 
-    		<pre>generate_ndobin -l http -p linux -o /tmp -se=true -enc=false</pre>
-    		<p>This command will generate linux payloads in <code>elf</code> format.</p>
+    		<pre>generate_ndobin -l http -p linux -o /tmp -r 23.124.67.10</pre>
+    		<p>This command will generate linux payloads in <code>elf</code> format and use 23.124.67.10 as proxy.</p>
 
     		<pre>generate_ndobin -l http -p windows -o /tmp -se=true -enc=false</pre>
     		<p>This command will generate payloads in the formats: <code>exe</code>, <code>bin</code>, <code>ps1</code>, and <code>stager</code> payloads. The stager source code will also be generated, which you can customize for evasion and AV bypass.</p>
