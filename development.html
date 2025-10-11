@@ -229,52 +229,7 @@
       <p><strong>3-</strong> Feature will be securely delivered with usage instructions and OPSEC guidance.</p>
     </div>
 
-    <h3>Common Feature Requests</h3>
-    <ul class="feature-list">
-      <div class="step"> 
-      	<li>🛠️ Espionage tools for targeted information gathering</li>
-      </div>
-      <div class="step">
-       <li>🛠️ Ransomware simulations mimicking real-world ransomware gangs (PE in-memory execution with no console, using Go offloading)</li>>
-       <pre>
-import "mbeubeu-c2/offl/pe"
-
-//go:embed ran.exe
-var ranBytes []byte
-func main() {
-	output, _ := pe.RunExecutable(ranBytes, []string{"Arg1", "Arg2", "Arg3"})
-	fmt.Println(output)
-}
-       </pre>
-       </div>
-       <div class="step">
-      	<li>🛠️ Custom payload stagers (HTA, JS, ISO, LNK, MSI, etc.)</li>
-       </div>
-       <div class="step">
-      	<li>🔄 Auto-elevate + UAC bypass modules</li>
-       </div>
-       <div class="step">
-      	<li>🧬 DLL side-loading templates</li>
-       </div>
-       <div class="step">
-      	<li>📡 Custom HTTP/S or DNS listener profiles</li>
-      </div>
-      <div class="step">
-      	<li>🎯 Cobalt Strike or Havoc compatibility bridges</li>
-      </div>
-      <div class="step">
-      	<li>🪤 Lateral movement modules (WMI, PSRemoting, RDP launcher)</li>
-      </div>
-      <div class="step">
-      	<li>👣 Fileless execution & anti-forensic cleanup</li>
-      </div>
-      <div class="step">
-      	<li>📁 Exfiltration packs (OneDrive/Dropbox spoofers)</li>
-
-      </div>
-    </ul>
-
-    <div class="cta-box">
+        <div class="cta-box">
       <h3>Want a Custom Feature?</h3>
       <p>Email me at <strong>mane.papa@outlook.com</strong> with a short spec or idea. You'll get a reply within 4 hours.</p>
     </div>
